@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Friendship Day</title>
+<style>
+body{margin:0;font-family:Arial;background:linear-gradient(135deg,#ff9ecf,#ffd9ea);display:flex;justify-content:center;align-items:center;min-height:100vh;text-align:center}
+.card{background:#fff;padding:25px;border-radius:18px;max-width:420px;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+.page{display:none}.page.active{display:block}
+button{padding:12px 22px;border:none;border-radius:25px;background:#ff4f8b;color:#fff;font-size:18px;margin:8px;cursor:pointer}
+img{max-width:100%;border-radius:12px}
+</style></head><body>
+<audio autoplay loop><source src="music/music.mp3"></audio>
+<div class="card">
+<div id="p1" class="page active">
+<h1>💝 Hello Chikku 💝</h1><h2>Happy Friendship Day 🌸</h2>
+<p>Mere paas tere liye ek surprise hai 🤭❤️</p>
+<button onclick="go('p2')">Open 🎁</button>
+</div>
+<div id="p2" class="page">
+<h2>Will You Be My Forever Best Friend? 🥹❤️</h2>
+<button onclick="go('p3')">❤️ Haan</button>
+<button onclick="alert('😂 Oye Langurrr!\nGalat button dabaya!\nNahi option sirf decoration ke liye hai 🤭❤️')">💔 Nahi</button>
+</div>
+<div id="p3" class="page">
+<h2>🐱 Tom & Jerry ❤️</h2>
+<img src="images/tomjerry.gif">
+<p>Bilkul hum dono ki tarah... kitna bhi ladein, saath kabhi nahi chhodte. ❤️</p>
+<button onclick="go('p4')">Next ➜</button>
+</div>
+<div id="p4" class="page">
+<h2>🎤 Sun na...</h2>
+<audio controls><source src="audio/voice.mp3"></audio><br><br>
+<button onclick="go('p5')">Last Surprise ❤️</button>
+</div>
+<div id="p5" class="page">
+<h2>😂 Oye Langurrrr!! 🐒❤️</h2>
+<p>🥳 Happy Friendship Day ❤️<br><br>
+I Love You So Much 🥹💖<br><br>
+Tu mujhe itna tang kyu karta hai? 😒😂<br>
+Jyada bhav mat kha 😤 warna mooh tod dungi 🤣👊<br><br>
+Aur haan... Mujhse kuch bhi mat chupaya kar ❤️<br>
+Main teri apni hoon na 🤗<br>
+Sab kuch share kar sakta hai... par chup mat rehna 🥹❤️<br><br>
+God Bless You 🙏✨<br>
+Achha padhna 📚 Achha rehna 🌸<br>
+Aur Bhagwan tumhe mujhe jhelne ki shakti de 🤣❤️<br><br>
+💞 Forever Best Friends 💞</p>
+<button onclick="location.reload()">🔄 Replay</button>
+</div>
+</div>
+<script>
+function go(id){
+document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+</script>
+</body></html>
